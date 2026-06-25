@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vegas Valentines LLC | Links</title>
+  <meta name="description" content="Vegas Valentines LLC — vintage Las Vegas inspired links to Instagram and contact email." />
+  <meta property="og:title" content="Vegas Valentines LLC | Links" />
+  <meta property="og:description" content="Visit Vegas Valentines LLC on Instagram or send an email." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    :root, [data-theme="light"] {
+      --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+      --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+      --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+      --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
+      --text-xl: clamp(1.6rem, 1.2rem + 1.5vw, 2.6rem);
+      --text-2xl: clamp(2.4rem, 1.5rem + 2.8vw, 4.5rem);
+      --space-2: 0.5rem;
+      --space-3: 0.75rem;
+      --space-4: 1rem;
+      --space-6: 1.5rem;
+      --space-8: 2rem;
+      --space-10: 2.5rem;
+      --space-12: 3rem;
+      --radius-sm: 0.375rem;
+      --radius-md: 0.85rem;
+      --radius-lg: 1.25rem;
+      --radius-xl: 2rem;
+      --radius-full: 9999px;
+      --color-bg: #fff0f3;
+      --color-surface: #fff9fa;
+      --color-surface-2: #ffd9e2;
+      --color-border: #d990a0;
+      --color-text: #4f101b;
+      --color-text-muted: #8c4857;
+      --color-primary: #c91534;
+      --color-primary-hover: #a9102a;
+      --color-secondary: #f45f7f;
+      --color-tertiary: #f3a1b5;
+      --color-highlight: #ffe3ea;
+      --color-white: #ffffff;
+      --shadow-sm: 0 10px 24px rgba(133, 11, 35, 0.16);
+      --shadow-md: 0 30px 80px rgba(133, 11, 35, 0.26);
+      --font-body: 'DM Sans', system-ui, sans-serif;
+      --font-display: 'Playfair Display', Georgia, serif;
+    }
+
+    [data-theme="dark"] {
+      --color-bg: #18070d;
+      --color-surface: #261018;
+      --color-surface-2: #33121d;
+      --color-border: #7a3144;
+      --color-text: #ffe8ee;
+      --color-text-muted: #d9a8b5;
+      --color-primary: #ff4a6d;
+      --color-primary-hover: #ff6f8c;
+      --color-secondary: #ff7895;
+      --color-tertiary: #612334;
+      --color-highlight: #3b1621;
+      --color-white: #fff8fb;
+      --shadow-sm: 0 10px 24px rgba(0, 0, 0, 0.22);
+      --shadow-md: 0 30px 80px rgba(0, 0, 0, 0.32);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      line-height: 1.6;
+      color: var(--color-text);
+      background:
+        radial-gradient(circle at top left, rgba(201, 21, 52, 0.18), transparent 26%),
+        radial-gradient(circle at top right, rgba(244, 95, 127, 0.14), transparent 24%),
+        linear-gradient(180deg, #ffe9ee 0%, var(--color-bg) 36%, #fff6f8 100%);
+      display: grid;
+      place-items: center;
+      padding: var(--space-6);
+      overflow-x: hidden;
+    }
+
+    a, button { transition: all 180ms cubic-bezier(0.16, 1, 0.3, 1); }
+    a { color: inherit; }
+    svg { display: block; }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: auto;
+    }
+
+    .skip-link:focus {
+      left: var(--space-4);
+      top: var(--space-4);
+      z-index: 1000;
+      background: var(--color-surface);
+      padding: var(--space-2) var(--space-3);
+      border-radius: var(--radius-sm);
+      outline: 2px solid var(--color-primary);
+    }
+
+    .shell {
+      width: min(100%, 40rem);
+      position: relative;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: var(--space-4);
+    }
+
+    .theme-toggle {
+      min-width: 44px;
+      min-height: 44px;
+      border-radius: var(--radius-full);
+      border: 1px solid color-mix(in oklab, var(--color-text) 10%, transparent);
+      background: color-mix(in oklab, var(--color-surface) 90%, white 10%);
+      color: var(--color-text);
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .theme-toggle:hover,
+    .theme-toggle:focus-visible {
+      background: var(--color-highlight);
+      transform: translateY(-1px);
+    }
+
+    .card {
+      background: linear-gradient(180deg, color-mix(in oklab, var(--color-surface) 95%, white 5%), var(--color-surface));
+      border: 1px solid color-mix(in oklab, var(--color-border) 88%, white 12%);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-md);
+      padding: var(--space-8);
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(8px);
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(120deg, transparent 0 34%, rgba(255,255,255,0.20) 41%, transparent 49%),
+        radial-gradient(circle at 15% 15%, rgba(255,255,255,0.18), transparent 16%),
+        repeating-linear-gradient(90deg, transparent 0 28px, rgba(201,21,52,0.03) 28px 30px);
+      pointer-events: none;
+      opacity: 0.55;
+    }
+
+    .sign {
+      width: min(100%, 19rem);
+      margin: 0 auto var(--space-8);
+      position: relative;
+      filter: drop-shadow(0 18px 30px rgba(133, 11, 35, 0.28));
+    }
+
+    .sign img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 50%;
+      border: 4px solid color-mix(in oklab, var(--color-primary) 22%, white);
+      box-shadow: var(--shadow-md);
+      background: var(--color-surface);
+    }
+
+    .eyebrow {
+      margin: 0 0 var(--space-3);
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: var(--text-xs);
+      color: var(--color-text-muted);
+      font-weight: 700;
+    }
+
+    h1 {
+      margin: 0;
+      text-align: center;
+      font-family: var(--font-display);
+      font-size: var(--text-2xl);
+      line-height: 0.98;
+    }
+
+    .subhead {
+      margin: var(--space-4) auto 0;
+      text-align: center;
+      color: var(--color-text-muted);
+      max-width: 30ch;
+    }
+
+    .star-row {
+      display: flex;
+      justify-content: center;
+      gap: var(--space-3);
+      margin: var(--space-8) 0;
+      color: var(--color-primary);
+      opacity: 0.92;
+    }
+
+    .star-row svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .links {
+      display: grid;
+      gap: var(--space-4);
+    }
+
+    .link-button {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-4);
+      text-decoration: none;
+      background: linear-gradient(180deg, color-mix(in oklab, var(--color-highlight) 66%, var(--color-surface)), color-mix(in oklab, var(--color-tertiary) 22%, var(--color-surface)));
+      border: 1px solid color-mix(in oklab, var(--color-primary) 30%, var(--color-border));
+      border-radius: var(--radius-lg);
+      padding: 1.1rem 1.2rem;
+      min-height: 74px;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .link-button::before {
+      content: "";
+      position: absolute;
+      left: -30%;
+      top: 0;
+      width: 40%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.22), transparent);
+      transform: skewX(-20deg);
+      transition: left 420ms ease;
+    }
+
+    .link-button:hover::before,
+    .link-button:focus-visible::before {
+      left: 110%;
+    }
+
+    .link-button:hover,
+    .link-button:focus-visible {
+      transform: translateY(-3px);
+      border-color: color-mix(in oklab, var(--color-primary) 54%, var(--color-border));
+      background: linear-gradient(180deg, color-mix(in oklab, var(--color-highlight) 78%, var(--color-surface)), color-mix(in oklab, var(--color-tertiary) 34%, var(--color-surface)));
+    }
+
+    .link-left {
+      display: flex;
+      align-items: center;
+      gap: var(--space-4);
+      min-width: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .icon-wrap {
+      width: 3rem;
+      height: 3rem;
+      border-radius: var(--radius-full);
+      background: var(--color-white);
+      display: grid;
+      place-items: center;
+      color: var(--color-primary);
+      border: 1px solid color-mix(in oklab, var(--color-primary) 18%, var(--color-border));
+      flex-shrink: 0;
+    }
+
+    .link-copy strong {
+      display: block;
+      font-size: var(--text-base);
+      line-height: 1.2;
+    }
+
+    .link-copy span {
+      display: block;
+      color: var(--color-text-muted);
+      font-size: var(--text-sm);
+    }
+
+    .arrow {
+      font-size: 1.35rem;
+      color: var(--color-primary);
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-note {
+      margin: var(--space-8) 0 0;
+      text-align: center;
+      color: var(--color-text-muted);
+      font-size: var(--text-xs);
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 3px;
+    }
+
+    @media (max-width: 520px) {
+      body { padding: var(--space-4); }
+      .card { padding: var(--space-6) var(--space-4); }
+      .sign { width: min(100%, 16rem); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="shell">
+    <div class="topbar">
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch color mode">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+    </div>
+
+    <main class="card" id="main">
+      <div class="sign">
+        <img src="./assets/vegas-valentines-logo.jpg" alt="Vegas Valentines LLC vintage Las Vegas logo" width="1080" height="1080" loading="lazy">
+      </div>
+
+      <p class="eyebrow">Vintage Vegas chapel inspired</p>
+      <h1>Vegas Valentines LLC</h1>
+      <p class="subhead">A richer old-Vegas red palette with a vintage chapel-sign feel and direct links to Instagram and contact.</p>
+
+      <div class="star-row" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.8 14.3 9l6.6.3-5.2 4.1 1.8 6.4L12 16.1 6.5 19.8l1.8-6.4L3 9.3 9.7 9 12 2.8Z"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.8 14.3 9l6.6.3-5.2 4.1 1.8 6.4L12 16.1 6.5 19.8l1.8-6.4L3 9.3 9.7 9 12 2.8Z"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.8 14.3 9l6.6.3-5.2 4.1 1.8 6.4L12 16.1 6.5 19.8l1.8-6.4L3 9.3 9.7 9 12 2.8Z"/></svg>
+      </div>
+
+      <section class="links" aria-label="Primary links">
+        <a class="link-button" href="https://www.instagram.com/vegasvalentines/" target="_blank" rel="noopener noreferrer" aria-label="Open Vegas Valentines LLC Instagram">
+          <div class="link-left">
+            <div class="icon-wrap" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                <circle cx="12" cy="12" r="4"></circle>
+                <circle cx="17.5" cy="6.5" r="1"></circle>
+              </svg>
+            </div>
+            <div class="link-copy">
+              <strong>Instagram</strong>
+              <span>@vegasvalentines</span>
+            </div>
+          </div>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+
+        <a class="link-button" href="mailto:weddings@vegasvalentines.com" target="_blank" rel="noopener noreferrer" aria-label="Email Vegas Valentines LLC">
+          <div class="link-left">
+            <div class="icon-wrap" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 6h16v12H4z"></path>
+                <path d="m4 7 8 6 8-6"></path>
+              </svg>
+            </div>
+            <div class="link-copy">
+              <strong>Contact me</strong>
+              <span>weddings@vegasvalentines.com</span>
+            </div>
+          </div>
+          <span class="arrow" aria-hidden="true">✉</span>
+        </a>
+      </section>
+
+      <p class="footer-note">Single-page static site for GitHub Pages.</p>
+    </main>
+  </div>
+
+  <script>
+    (function () {
+      const root = document.documentElement;
+      const toggle = document.querySelector('[data-theme-toggle]');
+      let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      root.setAttribute('data-theme', theme);
+
+      const renderIcon = () => {
+        toggle.innerHTML = theme === 'dark'
+          ? '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg>'
+          : '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>';
+        toggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+      };
+
+      renderIcon();
+      toggle.addEventListener('click', () => {
+        theme = theme === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', theme);
+        renderIcon();
+      });
+    })();
+  </script>
+</body>
+</html>
+EOF && head -n 40 output/linktree-site/jacob-links.html
